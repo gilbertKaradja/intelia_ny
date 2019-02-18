@@ -1,0 +1,32 @@
+.FadeImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+    .placeholder {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #f1f1f1;
+
+        &.hidden {
+            animation: fade-image-fade-in 0.3s;
+            opacity: 0;
+        }
+    }
+}
+
+
+@keyframes fade-image-fade-in {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

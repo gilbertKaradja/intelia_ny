@@ -41,4 +41,31 @@
             display: inline-block;
         }
     }
+
+    .articles_wrapper {
+        .load_control {
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            height: 60px;
+
+            .text {
+                vertical-align: middle;
+                display: inline-block;
+                font-size: 1.6rem;
+                color: #5085ff;
+            }
+
+            &::before {
+                content: '';
+                height: 100%;
+                vertical-align: middle;
+                display: inline-block;
+            }
+            
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
 }

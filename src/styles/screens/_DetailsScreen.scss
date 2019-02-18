@@ -6,6 +6,7 @@
     background: white;
     width: 100%;
     height: 100%;
+    animation: details-screen-slide-in 0.5s;
 
     .header {
         padding-left: 15px;
@@ -13,7 +14,7 @@
         height: 85px;
         box-sizing: border-box;
         background-color: #f1f1f1;
-        border-bottom: 2px solid #eee;
+        border-bottom: 1px solid #e1e1e1;
 
         .wrapper {
             display: inline-block;
@@ -36,13 +37,13 @@
                 vertical-align: top;
                 
                 .title {
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     line-height: 2rem;
                     margin-bottom: 10px;
                 }
     
                 .section {
-                    font-size: 1.8rem;
+                    font-size: 1.4rem;
                     color: #3c8ac2;
                 }
             }
@@ -61,59 +62,62 @@
         overflow: auto;
         height: calc(100% - 85px);
         padding-top: 0px;
+        background: #fafafa;
 
-        .image_wrapper {
-            margin-bottom: 20px;
-            width: 100%;
+        .wrapper {
+            background-color: white;
 
-            img {
-                width: 100%;
-            }
-        }
-
-        .article_details {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 40px;
-
-            .title {
-
-                font-size: 2.2rem;
-                line-height: 3rem;
-                margin-bottom: 15px;
-            }
-    
-            .author {
-                font-size: 1.2rem;
-                margin-bottom: 7px;
-            }
-
-            .date {
-                font-size: 1.2rem;
-                color: #888;
-            }
-    
-            .abstract {
-                margin-top: 30px;
-                font-size: 1.6rem;
-                line-height: 2.5rem;
+            .image_wrapper {
                 margin-bottom: 20px;
+                width: 100%;
+                height: 260px;
+                overflow: hidden;
             }
 
-            .redirect_wrapper {
-                width: 100%;
-                text-align: center;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                box-sizing: border-box;
+            .article_details {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 40px;
 
-                a {
-                    display: block;
-                    text-decoration: none;
+                .title {
+
+                    font-size: 2.2rem;
+                    line-height: 3rem;
+                    margin-bottom: 15px;
+                }
+
+                .author {
+                    font-size: 1.2rem;
+                    margin-bottom: 7px;
+                }
+
+                .date {
+                    font-size: 1.2rem;
+                    color: #888;
+                }
+
+                .abstract {
+                    margin-top: 30px;
                     font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    margin-bottom: 40px;
+                }
+
+                .redirect_wrapper {
                     width: 100%;
-                    padding: 10px;
-                    color: #50a3df;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                        width: 100%;
+                        padding: 10px;
+                        color: #50a3df;
+                    }
                 }
             }
         }
@@ -124,11 +128,11 @@
 
 @media (min-width: 440px) {
 
-    .DetailsScreen {   
+    .DetailsScreen { 
+        animation: none;
         .header {
 
             .wrapper {
-
                 .button_container {
                     display: none;
                 }
@@ -142,7 +146,15 @@
                 margin: auto;
                 margin-top: 40px;
                 margin-bottom: 40px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+                .image_wrapper{
+                    height: 345px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
             }
 
         }
@@ -150,3 +162,14 @@
 }
 
 
+@keyframes details-screen-slide-in {
+    0% {
+        opacity: 0.9;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

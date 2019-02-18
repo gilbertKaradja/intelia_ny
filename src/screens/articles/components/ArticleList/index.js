@@ -14,7 +14,7 @@ class ArticleList extends Component {
             content = (
                 <div className="center_wrapper">
                     <div>
-                        <div className="loader">Loading...</div>
+                        <div className="loader_bars">Loading...</div>
                     </div>
                 </div>
             );
@@ -44,11 +44,19 @@ class ArticleList extends Component {
             });
 
             content = (
-                <div className="">
+                <div className="articles_wrapper">
                     {itemRows}
 
-                    <div onClick={this.props.loadMoreClickHandler} className="">
-                        Load More
+                    <div className="load_control" onClick={this.props.loadMoreClickHandler}>
+                        {this.props.fetchingMoreArticles && (
+                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        )}
+
+                        {!this.props.fetchingMoreArticles && (
+                            <div className="text">Load More</div>
+                        )}
+
+
                     </div>
                 </div>
             );
@@ -58,8 +66,8 @@ class ArticleList extends Component {
                 <div className="center_wrapper">
                     <div>
                         <img src={noPostsImg} />
-                        <div className="description">THERE AREN'T ANY</div>
-                        <div className="description">POSTS HERE</div>
+                        <div className="description">These aren't the articles you are</div>
+                        <div className="description">looking for</div>
                     </div>
                 </div>
             );

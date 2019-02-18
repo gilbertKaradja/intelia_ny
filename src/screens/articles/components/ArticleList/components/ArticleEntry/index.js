@@ -1,13 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import FadeImage from '../../../../../../components/FadeImage/index.js';
 
 import icon from '../../../../../../assets/icons/right-chevron.svg';
 
 const ArticleEntry = (props) => {
+
+
+
+    let imageLocation;
+
+    try {
+        props.media[0]['media-metadata'].map(item => {
+            if (item.format === 'Standard Thumbnail') {
+                imageLocation = item.url;
+            }
+        });
+    } catch (e) {
+        imageLocation = '';
+    }
+
+
     return (
         <div className={props.selected ? 'ArticleEntry selected' : 'ArticleEntry'} onClick={props.onClickHandler}>
 
             <div className="thumbnail_wrapper">
-                <img src={'https://static01.nyt.com/images/2019/01/31/world/00sheika2/merlin_150012405_aeff8c17-9448-45d4-9de6-804206d4c3c9-thumbStandard.jpg'} />
+                <FadeImage src={imageLocation} />
             </div>
 
             <div className="details_wrapper">

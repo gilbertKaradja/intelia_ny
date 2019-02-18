@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { ReactComponent as BackIcon } from '../../../assets/icons/back-arrow.svg';
 
-import place from '../../../assets/images/details_placeholder.jpg';
+import FadeImage from '../../../components/FadeImage/index.js';
 
 class DetailsScreen extends Component {
 
@@ -15,6 +15,20 @@ class DetailsScreen extends Component {
     render() {
 
         let { articleData } = this.props;
+
+        let imageLocation;
+
+        try {
+            articleData.media[0]['media-metadata'].map(item => {
+                if (item.format === 'mediumThreeByTwo440') {
+                    imageLocation = item.url;
+                }
+            });
+        } catch (e) {
+            imageLocation = '';
+        }
+
+
 
         return (
             <div className="DetailsScreen">
@@ -40,7 +54,7 @@ class DetailsScreen extends Component {
 
                     <div className="wrapper">
                         <div className="image_wrapper">
-                            <img src={place} />
+                            <FadeImage src={imageLocation} />
                         </div>
 
                         <div className="article_details">

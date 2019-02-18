@@ -9,11 +9,17 @@ import ArticleList from './components/ArticleList/index.js';
 import { getArticles } from '../../services/api.js';
 
 
-const sectionOptions = [
-    { label: 'All', value: 'all-sections' },
-    { label: 'Tech', value: 'technology' },
-    { label: 'World', value: 'world' }
-];
+
+let sectionEntries = ['arts', 'automobiles', 'books', 'business', 'fashion', 'food', 'health', 'home', 'insider', 'magazine', 'movies', 'national', 'nyregion', 'obituaries', 'opinion', 'politics', 'realestate', 'science', 'sports', 'sundayreview', 'technology', 'theater', 'tmagazine', 'travel', 'upshot', 'world'];
+
+const sectionOptions = sectionEntries.map(item => {
+    return {
+        label: item[0].toUpperCase() + item.slice(1),
+        value: item
+    }
+});
+
+sectionOptions.splice(0, 0, {label:'All', value:'all-sections'});
 
 const periodOptions = [
     { label: 'today', value: '1' },
@@ -49,6 +55,15 @@ class ArticlesScreen extends Component {
 
     componentDidMount() {
         this.fetchArticles();
+    }
+
+    componentDidUpdate(prevProps) {
+        let previousLocation = prevProps.location.pathname;
+        let currentLocation = this.props.location.pathname;
+
+        if(previousLocation ==='/articles/details' && currentLocation === '/articles' ) {
+            this.setState({activeArticleData: null});
+        }
     }
 
     render() {
@@ -105,6 +120,11 @@ class ArticlesScreen extends Component {
                         path={this.props.match.url + '/details'}
                         render={(props) => <DetailsScreen {...props} articleData={this.state.activeArticleData} />}
                     />
+
+                    <div className="details_placeholder">
+                        <div className="header"></div>
+                        <div className="placeholder">Select an article to view</div>
+                    </div>
                 </div>
 
 

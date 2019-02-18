@@ -10,6 +10,7 @@ $thumbnail_size: 65px;
     border-bottom: 1px solid #f4f4f4;
     background-position: center;
     transition: background 0.2s;
+    cursor: pointer;
 
     
     .thumbnail_wrapper {
@@ -19,14 +20,6 @@ $thumbnail_size: 65px;
         overflow: hidden;
         width: $thumbnail_size;
         height: $thumbnail_size;
-        background-color: #f1f1f1;
-        transition: background 0.2s;
-
-        img {
-            display: none;
-            width: $thumbnail_size;
-            height: $thumbnail_size;
-        }
     }
 
     .details_wrapper {

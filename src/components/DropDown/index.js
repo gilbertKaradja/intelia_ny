@@ -12,20 +12,26 @@ class DropDown extends Component {
         }
 
         this.openHandler = this.openHandler.bind(this);
+        this.closeHandler = this.closeHandler.bind(this);
     }
 
     componentDidMount() {
-
+        document.addEventListener('click', this.closeHandler);
     }
 
     componentWillUnmount() {
-
+        document.removeEventListener('click', this.closeHandler);
     }
 
     render() {
         return (
-            <div className="DropDown" onClick={this.openHandler}>
-                <div className="value_container">
+            <div className="DropDown">
+                
+                {this.state.showList && (
+                    <div className="overlay"></div>
+                )}
+                
+                <div className="value_container" onClick={this.openHandler}>
 
                     <div className="text">
                         {this.props.value.label}
@@ -50,7 +56,10 @@ class DropDown extends Component {
         );
     }
 
-    openHandler() {
+    openHandler(evt) {
+        // evt.stopPropagation();
+        evt.nativeEvent.stopImmediatePropagation();
+
         let { showList } = this.state;
         if (showList) {
             return;
@@ -64,6 +73,12 @@ class DropDown extends Component {
 
         this.setState({ showList: false });
     }
+
+    closeHandler(evt) {
+        this.setState({ showList: false });
+    }
+
+
 }
 
 DropDown.propTypes = {
