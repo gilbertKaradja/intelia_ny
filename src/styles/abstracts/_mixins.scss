@@ -1,0 +1,14 @@
+@mixin apllication-header {
+    padding: 15px;
+    height: 110px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #eee;
+}
+
+@mixin center-align-before {
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}

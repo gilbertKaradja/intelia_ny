@@ -1,0 +1,16 @@
+.PeriodRange {
+    
+    .item {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 7px 5px 7px;
+        border-radius: 4px;
+        
+        font-size: 1.2rem;
+    }
+
+    .item.active {
+        background-color: #5085ff;
+        color: white; 
+    }
+}
