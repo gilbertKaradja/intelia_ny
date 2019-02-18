@@ -16,25 +16,26 @@ class DropDown extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener('click', this.closeHandler);
+        // document.addEventListener('click', this.closeHandler);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('click', this.closeHandler);
+        // document.removeEventListener('click', this.closeHandler);
     }
 
     render() {
+        let {value, options} = this.props;
         return (
             <div className="DropDown">
-                
+
                 {this.state.showList && (
-                    <div className="overlay"></div>
+                    <div className="overlay" onClick={this.closeHandler}></div>
                 )}
-                
+
                 <div className="value_container" onClick={this.openHandler}>
 
                     <div className="text">
-                        {this.props.value.label}
+                        {value.label}
                     </div>
 
                     <div className="icon">
@@ -46,8 +47,15 @@ class DropDown extends Component {
                 {this.state.showList && (
                     <div className="dropdown_list">
                         <ul>
-                            {this.props.options.map(item => {
-                                return <li key={item.value} onClick={() => { this.itemSelectHandler(item) }}>{item.label}</li>;
+                            {options.map(item => {
+                                return (
+                                    <li
+                                        key={item.value}
+                                        className={value.value === item.value ? 'active' : ''}
+                                        onClick={() => { this.itemSelectHandler(item) }}>
+                                        {item.label}
+                                    </li>
+                                );
                             })}
                         </ul>
                     </div>
@@ -57,8 +65,7 @@ class DropDown extends Component {
     }
 
     openHandler(evt) {
-        // evt.stopPropagation();
-        evt.nativeEvent.stopImmediatePropagation();
+        evt.stopPropagation();
 
         let { showList } = this.state;
         if (showList) {

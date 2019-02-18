@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeriodRange component should call a handler function and reflect value accordingly 1`] = `
+<PeriodRange
+  onChange={[MockFunction]}
+  options={
+    Array [
+      Object {
+        "label": "today",
+        "value": "1",
+      },
+      Object {
+        "label": "last week",
+        "value": "7",
+      },
+      Object {
+        "label": "last month",
+        "value": "30",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "today",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="PeriodRange"
+  >
+    <div
+      className="item active"
+      key="1"
+      onClick={[Function]}
+    >
+      today
+    </div>
+    <div
+      className="item"
+      key="7"
+      onClick={[Function]}
+    >
+      last week
+    </div>
+    <div
+      className="item"
+      key="30"
+      onClick={[Function]}
+    >
+      last month
+    </div>
+  </div>
+</PeriodRange>
+`;
+
+exports[`PeriodRange component should call a handler function and reflect value accordingly 2`] = `
+<PeriodRange
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "label": "last week",
+            "value": "7",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Object {
+            "label": "last week",
+            "value": "7",
+          },
+        },
+      ],
+    }
+  }
+  options={
+    Array [
+      Object {
+        "label": "today",
+        "value": "1",
+      },
+      Object {
+        "label": "last week",
+        "value": "7",
+      },
+      Object {
+        "label": "last month",
+        "value": "30",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "today",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="PeriodRange"
+  >
+    <div
+      className="item active"
+      key="1"
+      onClick={[Function]}
+    >
+      today
+    </div>
+    <div
+      className="item"
+      key="7"
+      onClick={[Function]}
+    >
+      last week
+    </div>
+    <div
+      className="item"
+      key="30"
+      onClick={[Function]}
+    >
+      last month
+    </div>
+  </div>
+</PeriodRange>
+`;
+
+exports[`PeriodRange component should render without issues 1`] = `
+<div
+  className="PeriodRange"
+>
+  <div
+    className="item active"
+    key="1"
+    onClick={[Function]}
+  >
+    today
+  </div>
+  <div
+    className="item"
+    key="7"
+    onClick={[Function]}
+  >
+    last week
+  </div>
+  <div
+    className="item"
+    key="30"
+    onClick={[Function]}
+  >
+    last month
+  </div>
+</div>
+`;

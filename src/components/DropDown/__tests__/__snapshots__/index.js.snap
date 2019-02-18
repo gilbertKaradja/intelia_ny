@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown component should call a handler function and update in value accordinglyDictionary 1`] = `
+<DropDown
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "label": "Stop Sign",
+            "value": "9",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Object {
+            "label": "Stop Sign",
+            "value": "9",
+          },
+        },
+      ],
+    }
+  }
+  options={
+    Array [
+      Object {
+        "label": "Train",
+        "value": "1",
+      },
+      Object {
+        "label": "Stop Sign",
+        "value": "9",
+      },
+      Object {
+        "label": "Couch",
+        "value": "joke",
+      },
+      Object {
+        "label": "Random Sentence",
+        "value": "evo993",
+      },
+      Object {
+        "label": "Something",
+        "value": "chihuahua",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "Train",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="DropDown"
+  >
+    <div
+      className="value_container"
+      onClick={[Function]}
+    >
+      <div
+        className="text"
+      >
+        Train
+      </div>
+      <div
+        className="icon"
+      >
+        <img
+          src="caret-down.svg"
+        />
+      </div>
+    </div>
+  </div>
+</DropDown>
+`;
+
+exports[`DropDown component should open and close properly 1`] = `
+<DropDown
+  options={
+    Array [
+      Object {
+        "label": "Train",
+        "value": "1",
+      },
+      Object {
+        "label": "Stop Sign",
+        "value": "9",
+      },
+      Object {
+        "label": "Couch",
+        "value": "joke",
+      },
+      Object {
+        "label": "Random Sentence",
+        "value": "evo993",
+      },
+      Object {
+        "label": "Something",
+        "value": "chihuahua",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "Train",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="DropDown"
+  >
+    <div
+      className="value_container"
+      onClick={[Function]}
+    >
+      <div
+        className="text"
+      >
+        Train
+      </div>
+      <div
+        className="icon"
+      >
+        <img
+          src="caret-down.svg"
+        />
+      </div>
+    </div>
+  </div>
+</DropDown>
+`;
+
+exports[`DropDown component should open and close properly 2`] = `
+<DropDown
+  options={
+    Array [
+      Object {
+        "label": "Train",
+        "value": "1",
+      },
+      Object {
+        "label": "Stop Sign",
+        "value": "9",
+      },
+      Object {
+        "label": "Couch",
+        "value": "joke",
+      },
+      Object {
+        "label": "Random Sentence",
+        "value": "evo993",
+      },
+      Object {
+        "label": "Something",
+        "value": "chihuahua",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "Train",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="DropDown"
+  >
+    <div
+      className="overlay"
+      onClick={[Function]}
+    />
+    <div
+      className="value_container"
+      onClick={[Function]}
+    >
+      <div
+        className="text"
+      >
+        Train
+      </div>
+      <div
+        className="icon"
+      >
+        <img
+          src="caret-down.svg"
+        />
+      </div>
+    </div>
+    <div
+      className="dropdown_list"
+    >
+      <ul>
+        <li
+          className="active"
+          key="1"
+          onClick={[Function]}
+        >
+          Train
+        </li>
+        <li
+          className=""
+          key="9"
+          onClick={[Function]}
+        >
+          Stop Sign
+        </li>
+        <li
+          className=""
+          key="joke"
+          onClick={[Function]}
+        >
+          Couch
+        </li>
+        <li
+          className=""
+          key="evo993"
+          onClick={[Function]}
+        >
+          Random Sentence
+        </li>
+        <li
+          className=""
+          key="chihuahua"
+          onClick={[Function]}
+        >
+          Something
+        </li>
+      </ul>
+    </div>
+  </div>
+</DropDown>
+`;
+
+exports[`DropDown component should open and close properly 3`] = `
+<DropDown
+  options={
+    Array [
+      Object {
+        "label": "Train",
+        "value": "1",
+      },
+      Object {
+        "label": "Stop Sign",
+        "value": "9",
+      },
+      Object {
+        "label": "Couch",
+        "value": "joke",
+      },
+      Object {
+        "label": "Random Sentence",
+        "value": "evo993",
+      },
+      Object {
+        "label": "Something",
+        "value": "chihuahua",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": "Train",
+      "value": "1",
+    }
+  }
+>
+  <div
+    className="DropDown"
+  >
+    <div
+      className="value_container"
+      onClick={[Function]}
+    >
+      <div
+        className="text"
+      >
+        Train
+      </div>
+      <div
+        className="icon"
+      >
+        <img
+          src="caret-down.svg"
+        />
+      </div>
+    </div>
+  </div>
+</DropDown>
+`;
+
+exports[`DropDown component should render without issues 1`] = `
+<div
+  className="DropDown"
+>
+  <div
+    className="value_container"
+    onClick={[Function]}
+  >
+    <div
+      className="text"
+    >
+      Train
+    </div>
+    <div
+      className="icon"
+    >
+      <img
+        src="caret-down.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
