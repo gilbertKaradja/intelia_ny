@@ -184,16 +184,21 @@ class ArticlesScreen extends Component {
         let result, error = null;
 
         try {
+
+            let normalizedOffset = Math.ceil(searchOffset / 20) * 20; 
+            
             result = await getArticles({
                 section: activeSection.value,
                 period: activePeriod.value,
-                offset: searchOffset + 20
+                offset: normalizedOffset
             });
 
             error = false;
             articleEntries = articleEntries.concat(result.data.results);
-            searchOffset += 20;
 
+            let resultCount = result.data.results.length;
+            searchOffset += resultCount;
+            
         } catch (e) {
             error = true;
         }
@@ -217,11 +222,14 @@ class ArticlesScreen extends Component {
             result = await getArticles({
                 section: activeSection.value,
                 period: activePeriod.value,
-                offset: searchOffset
+                offset: 0
             });
 
             error = false;
             articleEntries = result.data.results;
+
+            let resultCount = result.data.results.length;
+            searchOffset = resultCount;
 
         } catch (e) {
             error = true;
@@ -232,7 +240,8 @@ class ArticlesScreen extends Component {
         this.setState({
             fetchingArticles: false,
             fetchingArticlesError: error,
-            articleEntries: articleEntries
+            articleEntries: articleEntries,
+            searchOffset: searchOffset
         });
     }
 }

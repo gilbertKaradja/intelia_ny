@@ -46,13 +46,14 @@ div, label, span {
 
 @media only screen and (min-device-width: 1400px) {
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    cursor: pointer;
   }
 
    
   *::-webkit-scrollbar-thumb {
-    background-color: rgba(200,200,200,0.5);
-    outline: 1px solid slategrey;
+    background-color: rgba(200,200,200,0.6);
+    cursor: pointer;
   }
 }
 
