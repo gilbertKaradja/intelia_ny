@@ -15,6 +15,8 @@ const ArticleEntry = (props) => {
             if (item.format === 'Standard Thumbnail') {
                 imageLocation = item.url;
             }
+
+            return item.url;
         });
     } catch (e) {
         imageLocation = '';
@@ -25,7 +27,7 @@ const ArticleEntry = (props) => {
         <div className={props.selected ? 'ArticleEntry selected' : 'ArticleEntry'} onClick={props.onClickHandler}>
 
             <div className="thumbnail_wrapper">
-                <FadeImage src={imageLocation} />
+                <FadeImage src={imageLocation} name='thumbnail'/>
             </div>
 
             <div className="details_wrapper">
@@ -42,7 +44,7 @@ const ArticleEntry = (props) => {
             </div>
 
             <div className="button_wrapper">
-                <img src={icon} />
+                <img src={icon} alt='caret_right'/>
             </div>
 
         </div>

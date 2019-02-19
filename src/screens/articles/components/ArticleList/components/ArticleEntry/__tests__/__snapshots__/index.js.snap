@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsScreen component should call the back handler function when back button is clicked/pressed 1`] = `
+<ArticleEntry
+  abstract="What does the way you speak say about where you’re from? Answer 25 questions to see your own custom dialect map."
+  articleData={
+    Object {
+      "abstract": "What does the way you speak say about where you’re from? Answer 25 questions to see your own custom dialect map.",
+      "byline": "By JOSH KATZ",
+      "id": 100000006354694,
+      "media": Array [
+        Object {
+          "media-metadata": Array [
+            Object {
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "url": "https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-thumbStandard-v3.jpg",
+              "width": 75,
+            },
+            Object {
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "url": "https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-mediumThreeByTwo440-v3.jpg",
+              "width": 440,
+            },
+          ],
+        },
+      ],
+      "published_date": "2019-02-15",
+      "section": "The Upshot",
+      "source": "The New York Times",
+      "title": "The British-Irish Dialect Quiz",
+      "url": "https://www.nytimes.com/interactive/2019/02/15/upshot/british-irish-dialect-quiz.html",
+    }
+  }
+  byline="By JOSH KATZ"
+  id={100000006354694}
+  media={
+    Array [
+      Object {
+        "media-metadata": Array [
+          Object {
+            "format": "Standard Thumbnail",
+            "height": 75,
+            "url": "https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-thumbStandard-v3.jpg",
+            "width": 75,
+          },
+          Object {
+            "format": "mediumThreeByTwo440",
+            "height": 293,
+            "url": "https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-mediumThreeByTwo440-v3.jpg",
+            "width": 440,
+          },
+        ],
+      },
+    ]
+  }
+  onClickHandler={[MockFunction]}
+  published_date="2019-02-15"
+  section="The Upshot"
+  source="The New York Times"
+  title="The British-Irish Dialect Quiz"
+  url="https://www.nytimes.com/interactive/2019/02/15/upshot/british-irish-dialect-quiz.html"
+>
+  <div
+    className="ArticleEntry"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="thumbnail_wrapper"
+    >
+      <FadeImage
+        name="thumbnail"
+        src="https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-thumbStandard-v3.jpg"
+      >
+        <div
+          className="FadeImage"
+        >
+          <img
+            alt="thumbnail"
+            onLoad={[Function]}
+            src="https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-thumbStandard-v3.jpg"
+          />
+          <div
+            className="placeholder"
+          />
+        </div>
+      </FadeImage>
+    </div>
+    <div
+      className="details_wrapper"
+    >
+      <div
+        className="title_author"
+      >
+        <div
+          className="title"
+        >
+          The British-Irish Dialect Quiz
+        </div>
+        <div
+          className="author"
+        >
+          By JOSH KATZ
+        </div>
+      </div>
+      <div
+        className="date"
+      >
+        <label>
+          2019-02-15
+        </label>
+      </div>
+    </div>
+    <div
+      className="button_wrapper"
+    >
+      <img
+        alt="caret_right"
+        src="right-chevron.svg"
+      />
+    </div>
+  </div>
+</ArticleEntry>
+`;
+
+exports[`DetailsScreen component should render properly even if an image is not available 1`] = `
+<div
+  className="ArticleEntry"
+>
+  <div
+    className="thumbnail_wrapper"
+  >
+    <FadeImage
+      name="thumbnail"
+      src=""
+    />
+  </div>
+  <div
+    className="details_wrapper"
+  >
+    <div
+      className="title_author"
+    >
+      <div
+        className="title"
+      >
+        The British-Irish Dialect Quiz
+      </div>
+      <div
+        className="author"
+      >
+        By JOSH KATZ
+      </div>
+    </div>
+    <div
+      className="date"
+    >
+      <label>
+        2019-02-15
+      </label>
+    </div>
+  </div>
+  <div
+    className="button_wrapper"
+  >
+    <img
+      alt="caret_right"
+      src="right-chevron.svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`DetailsScreen component should render without issues 1`] = `
+<div
+  className="ArticleEntry selected"
+>
+  <div
+    className="thumbnail_wrapper"
+  >
+    <FadeImage
+      name="thumbnail"
+      src="https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-thumbStandard-v3.jpg"
+    />
+  </div>
+  <div
+    className="details_wrapper"
+  >
+    <div
+      className="title_author"
+    >
+      <div
+        className="title"
+      >
+        The British-Irish Dialect Quiz
+      </div>
+      <div
+        className="author"
+      >
+        By JOSH KATZ
+      </div>
+    </div>
+    <div
+      className="date"
+    >
+      <label>
+        2019-02-15
+      </label>
+    </div>
+  </div>
+  <div
+    className="button_wrapper"
+  >
+    <img
+      alt="caret_right"
+      src="right-chevron.svg"
+    />
+  </div>
+</div>
+`;

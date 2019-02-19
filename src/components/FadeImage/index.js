@@ -22,7 +22,7 @@ class FadeImage extends Component {
         return (
             <div className="FadeImage">
 
-                <img src={this.props.src} onLoad={this.onLoadHandler} />
+                <img src={this.props.src} onLoad={this.onLoadHandler} alt={this.props.name}/>
 
                 <div className={this.state.imageLoaded ? 'placeholder hidden' : 'placeholder'}></div>
             </div>

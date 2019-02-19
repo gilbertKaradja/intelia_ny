@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import DropDown from '../../components/DropDown/index.js';
 import PeriodRange from '../../components/PeriodRange/index.js';
@@ -19,7 +19,7 @@ const sectionOptions = sectionEntries.map(item => {
     }
 });
 
-sectionOptions.splice(0, 0, {label:'All', value:'all-sections'});
+sectionOptions.splice(0, 0, { label: 'All', value: 'all-sections' });
 
 const periodOptions = [
     { label: 'today', value: '1' },
@@ -45,9 +45,13 @@ class ArticlesScreen extends Component {
             fetchingMoreArticlesError: false
         }
 
-        this.selectArticleHandler = this.selectArticleHandler.bind(this);
+        
+
         this.sectionChangeHandler = this.sectionChangeHandler.bind(this);
         this.periodChangeHandler = this.periodChangeHandler.bind(this);
+
+        this.selectArticleHandler = this.selectArticleHandler.bind(this);
+        this.retryFetchingHandler = this.retryFetchingHandler.bind(this);
 
         this.loadMoreArticlesHandler = this.loadMoreArticlesHandler.bind(this);
         this.fetchMoreArticles = this.fetchMoreArticles.bind(this);
@@ -61,8 +65,8 @@ class ArticlesScreen extends Component {
         let previousLocation = prevProps.location.pathname;
         let currentLocation = this.props.location.pathname;
 
-        if(previousLocation ==='/articles/details' && currentLocation === '/articles' ) {
-            this.setState({activeArticleData: null});
+        if (previousLocation === '/articles/details' && currentLocation === '/articles') {
+            this.setState({ activeArticleData: null });
         }
     }
 
@@ -108,6 +112,7 @@ class ArticlesScreen extends Component {
 
                             selectArticleHandler={this.selectArticleHandler}
                             activeArticleData={this.state.activeArticleData}
+                            retryButtonHandler={this.retryFetchingHandler}
                             loadMoreClickHandler={this.loadMoreArticlesHandler}
                             fetchingMoreArticles={this.state.fetchingMoreArticles}
                         />
@@ -153,8 +158,18 @@ class ArticlesScreen extends Component {
 
 
     selectArticleHandler(value) {
+
         this.setState({ activeArticleData: value })
-        this.props.history.push('/articles/details');
+
+        if (this.props.location.pathname !== '/articles/details') {
+            this.props.history.push('/articles/details');
+        }
+    }
+
+    retryFetchingHandler() {
+        this.setState({ fetchingArticles: true }, () => {
+            this.fetchArticles();
+        });
     }
 
     loadMoreArticlesHandler() {

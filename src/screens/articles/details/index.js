@@ -16,6 +16,11 @@ class DetailsScreen extends Component {
 
         let { articleData } = this.props;
 
+        if(articleData === null) {
+            this.props.history.goBack();
+            return null;
+        }
+
         let imageLocation;
 
         try {
@@ -23,6 +28,8 @@ class DetailsScreen extends Component {
                 if (item.format === 'mediumThreeByTwo440') {
                     imageLocation = item.url;
                 }
+
+                return item.url;
             });
         } catch (e) {
             imageLocation = '';
@@ -68,7 +75,7 @@ class DetailsScreen extends Component {
                             <div className="abstract">{articleData.abstract}</div>
 
                             <div className="redirect_wrapper">
-                                <a href={articleData.url} target="_blank">Read More</a>
+                                <a href={articleData.url} target="_blank" rel="noopener noreferrer">Read More</a>
                             </div>
 
                         </div>

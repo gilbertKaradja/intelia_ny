@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsScreen component should render properly even if an image is not available 1`] = `
+<div
+  className="DetailsScreen"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="button_container"
+        onClick={[Function]}
+      >
+        <ReactComponent />
+      </div>
+      <div
+        className="text"
+      >
+        <div
+          className="title"
+        >
+          The New York Times
+        </div>
+        <div
+          className="section"
+        >
+          The Upshot
+        </div>
+      </div>
+      <div
+        className=""
+      />
+    </div>
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="image_wrapper"
+      >
+        <FadeImage
+          src=""
+        />
+      </div>
+      <div
+        className="article_details"
+      >
+        <div
+          className="title"
+        >
+          The British-Irish Dialect Quiz
+        </div>
+        <div
+          className="author"
+        >
+          By JOSH KATZ
+        </div>
+        <div
+          className="date"
+        >
+          2019-02-15
+        </div>
+        <div
+          className="abstract"
+        >
+          What does the way you speak say about where you’re from? Answer 25 questions to see your own custom dialect map.
+        </div>
+        <div
+          className="redirect_wrapper"
+        >
+          <a
+            href="https://www.nytimes.com/interactive/2019/02/15/upshot/british-irish-dialect-quiz.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DetailsScreen component should render without issues 1`] = `
+<div
+  className="DetailsScreen"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="button_container"
+        onClick={[Function]}
+      >
+        <ReactComponent />
+      </div>
+      <div
+        className="text"
+      >
+        <div
+          className="title"
+        >
+          The New York Times
+        </div>
+        <div
+          className="section"
+        >
+          The Upshot
+        </div>
+      </div>
+      <div
+        className=""
+      />
+    </div>
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="image_wrapper"
+      >
+        <FadeImage
+          src="https://static01.nyt.com/images/2019/02/14/us/british-irish-dialect-quiz-promo-1550183830563/british-irish-dialect-quiz-promo-1550183830563-mediumThreeByTwo440-v3.jpg"
+        />
+      </div>
+      <div
+        className="article_details"
+      >
+        <div
+          className="title"
+        >
+          The British-Irish Dialect Quiz
+        </div>
+        <div
+          className="author"
+        >
+          By JOSH KATZ
+        </div>
+        <div
+          className="date"
+        >
+          2019-02-15
+        </div>
+        <div
+          className="abstract"
+        >
+          What does the way you speak say about where you’re from? Answer 25 questions to see your own custom dialect map.
+        </div>
+        <div
+          className="redirect_wrapper"
+        >
+          <a
+            href="https://www.nytimes.com/interactive/2019/02/15/upshot/british-irish-dialect-quiz.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

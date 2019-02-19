@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import DetailsScreen from '../index.js';
+import ArticleEntry from '../index.js';
 
 let sampleData = {
     "url": "https://www.nytimes.com/interactive/2019/02/15/upshot/british-irish-dialect-quiz.html",
@@ -58,8 +58,9 @@ describe('DetailsScreen component', () => {
 
         //renders initial dropdown properly
         const component = shallow(
-            <DetailsScreen
-                articleData={sampleData}
+            <ArticleEntry
+                {...sampleData}
+                selected={true}
             />
         );
         expect(component).toMatchSnapshot();
@@ -72,8 +73,9 @@ describe('DetailsScreen component', () => {
 
         //renders initial dropdown properly
         const component = shallow(
-            <DetailsScreen
-                articleData={sampleData2}
+            <ArticleEntry
+                {...sampleData2}
+                selected={false}
             />
         );
         expect(component).toMatchSnapshot();
@@ -85,17 +87,23 @@ describe('DetailsScreen component', () => {
 
     it('should call the back handler function when back button is clicked/pressed', () => {
 
-        const spy = jest.spyOn(DetailsScreen.prototype, 'goBack');
+        const onClickHandler = jest.fn(() => sampleData);
 
         const component = mount(
-            <DetailsScreen
+            <ArticleEntry
                 articleData={sampleData}
-                history={{goBack: () => {}}}
+                {...sampleData}
+                onClickHandler={onClickHandler}
             />
         );
 
-        component.instance().goBack();
+        expect(component).toMatchSnapshot();
 
-        expect(spy).toHaveBeenCalled();
+        component.find('.ArticleEntry').simulate('click');
+
+        expect(onClickHandler.mock.calls.length).toBe(1);
+        expect(onClickHandler.mock.results[0].value.id).toBe(sampleData.id);
+
+        component.unmount();
     });
 });

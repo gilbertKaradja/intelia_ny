@@ -39,7 +39,7 @@ class DropDown extends Component {
                     </div>
 
                     <div className="icon">
-                        <img src={icon} />
+                        <img src={icon} alt='caret'/>
                     </div>
 
                 </div>

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ArticleEntry from './components/ArticleEntry/index.js';
 
-import noPostsImg from '../../../../assets/images/empty.png';
+
+import LoadingContent from './components/LoadingContent.js';
+import ErrorLoadingContent from './components/ErrorLoadingContent.js';
+import EmptyContent from './components/EmptyContent.js';
 
 class ArticleList extends Component {
 
@@ -11,24 +14,11 @@ class ArticleList extends Component {
 
         if (loading) {
 
-            content = (
-                <div className="center_wrapper">
-                    <div>
-                        <div className="loader_bars">Loading...</div>
-                    </div>
-                </div>
-            );
+            content = <LoadingContent />;
 
         } else if (!loading && errorLoading) {
 
-            content = (
-                <div className="center_wrapper">
-                    <div>
-                        <div className="description">WE COULDN'T GET THE POSTS</div>
-                        <button>Try Again</button>
-                    </div>
-                </div>
-            );
+            content = <ErrorLoadingContent retryButtonHandler={this.props.retryButtonHandler}/>;
 
         } else if (data && data.length > 0) {
 
@@ -38,7 +28,7 @@ class ArticleList extends Component {
                         key={item.id}
                         {...item}
                         onClickHandler={() => this.props.selectArticleHandler(item)}
-                        selected={activeArticleData && activeArticleData.id == item.id}
+                        selected={activeArticleData && activeArticleData.id === item.id}
                     />
                 );
             });
@@ -62,15 +52,7 @@ class ArticleList extends Component {
             );
 
         } else {
-            content = (
-                <div className="center_wrapper">
-                    <div>
-                        <img src={noPostsImg} />
-                        <div className="description">These aren't the articles you are</div>
-                        <div className="description">looking for</div>
-                    </div>
-                </div>
-            );
+            content = <EmptyContent />;
         }
 
         return (
