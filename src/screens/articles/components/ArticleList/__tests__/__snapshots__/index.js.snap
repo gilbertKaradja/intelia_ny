@@ -1,5 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ArticleList component should render a list of articles given a list of articles 1`] = `
+<ArticleList
+  activeArticleData={
+    Object {
+      "id": "itemOne",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "id": "itemOne",
+      },
+      Object {
+        "id": "itemTwo",
+      },
+      Object {
+        "id": "itemTHree",
+      },
+    ]
+  }
+  errorLoading={false}
+  fetchingMoreArticles={false}
+  loadMoreClickHandler={[MockFunction]}
+  loading={false}
+  selectArticleHandler={[MockFunction]}
+>
+  <div
+    className="ArticleList"
+  >
+    <ArticlesContent
+      activeArticleData={
+        Object {
+          "id": "itemOne",
+        }
+      }
+      data={
+        Array [
+          Object {
+            "id": "itemOne",
+          },
+          Object {
+            "id": "itemTwo",
+          },
+          Object {
+            "id": "itemTHree",
+          },
+        ]
+      }
+      fetchingMoreArticles={false}
+      loadMoreClickHandler={[MockFunction]}
+      selectArticleHandler={[MockFunction]}
+    >
+      <div
+        className="articles_wrapper"
+      >
+        <ArticleEntry
+          id="itemOne"
+          key="itemOne"
+          onClickHandler={[Function]}
+          selected={true}
+        >
+          <div
+            className="ArticleEntry selected"
+            onClick={[Function]}
+          >
+            <div
+              className="thumbnail_wrapper"
+            >
+              <FadeImage
+                name="thumbnail"
+                src=""
+              >
+                <div
+                  className="FadeImage"
+                >
+                  <img
+                    alt="thumbnail"
+                    onLoad={[Function]}
+                    src=""
+                  />
+                  <div
+                    className="placeholder"
+                  />
+                </div>
+              </FadeImage>
+            </div>
+            <div
+              className="details_wrapper"
+            >
+              <div
+                className="title_author"
+              >
+                <div
+                  className="title block-with-text"
+                />
+                <div
+                  className="author"
+                />
+                <div
+                  className="date"
+                >
+                  <label />
+                </div>
+              </div>
+            </div>
+            <div
+              className="button_wrapper"
+            >
+              <img
+                alt="caret_right"
+                src="right-chevron.svg"
+              />
+            </div>
+          </div>
+        </ArticleEntry>
+        <ArticleEntry
+          id="itemTwo"
+          key="itemTwo"
+          onClickHandler={[Function]}
+          selected={false}
+        >
+          <div
+            className="ArticleEntry"
+            onClick={[Function]}
+          >
+            <div
+              className="thumbnail_wrapper"
+            >
+              <FadeImage
+                name="thumbnail"
+                src=""
+              >
+                <div
+                  className="FadeImage"
+                >
+                  <img
+                    alt="thumbnail"
+                    onLoad={[Function]}
+                    src=""
+                  />
+                  <div
+                    className="placeholder"
+                  />
+                </div>
+              </FadeImage>
+            </div>
+            <div
+              className="details_wrapper"
+            >
+              <div
+                className="title_author"
+              >
+                <div
+                  className="title block-with-text"
+                />
+                <div
+                  className="author"
+                />
+                <div
+                  className="date"
+                >
+                  <label />
+                </div>
+              </div>
+            </div>
+            <div
+              className="button_wrapper"
+            >
+              <img
+                alt="caret_right"
+                src="right-chevron.svg"
+              />
+            </div>
+          </div>
+        </ArticleEntry>
+        <ArticleEntry
+          id="itemTHree"
+          key="itemTHree"
+          onClickHandler={[Function]}
+          selected={false}
+        >
+          <div
+            className="ArticleEntry"
+            onClick={[Function]}
+          >
+            <div
+              className="thumbnail_wrapper"
+            >
+              <FadeImage
+                name="thumbnail"
+                src=""
+              >
+                <div
+                  className="FadeImage"
+                >
+                  <img
+                    alt="thumbnail"
+                    onLoad={[Function]}
+                    src=""
+                  />
+                  <div
+                    className="placeholder"
+                  />
+                </div>
+              </FadeImage>
+            </div>
+            <div
+              className="details_wrapper"
+            >
+              <div
+                className="title_author"
+              >
+                <div
+                  className="title block-with-text"
+                />
+                <div
+                  className="author"
+                />
+                <div
+                  className="date"
+                >
+                  <label />
+                </div>
+              </div>
+            </div>
+            <div
+              className="button_wrapper"
+            >
+              <img
+                alt="caret_right"
+                src="right-chevron.svg"
+              />
+            </div>
+          </div>
+        </ArticleEntry>
+        <div
+          className="load_control"
+          onClick={[MockFunction]}
+        >
+          <div
+            className="text"
+          >
+            Load More
+          </div>
+        </div>
+      </div>
+    </ArticlesContent>
+  </div>
+</ArticleList>
+`;
+
 exports[`ArticleList component should render a loading indicator when loading 1`] = `
 <ArticleList
   loading={true}

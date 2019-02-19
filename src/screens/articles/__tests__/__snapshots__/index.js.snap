@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlesScreen component should render without issues 1`] = `
+<HashRouter>
+  <Router
+    history={
+      Object {
+        "action": "REPLACE",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/articles",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Switch>
+      <Route
+        computedMatch={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/articles",
+            "url": "/articles",
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/articles",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        path="/articles"
+        render={[Function]}
+      >
+        <ArticlesScreen
+          history={
+            Object {
+              "action": "REPLACE",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/articles",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/articles",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/articles",
+              "url": "/articles",
+            }
+          }
+        >
+          <div
+            className="ArticlesScreen"
+          >
+            <div
+              className="side_content"
+            >
+              <div
+                className="header"
+              >
+                <div>
+                  <div
+                    className="title"
+                  >
+                    TOP STORIES
+                  </div>
+                  <div
+                    className="controls"
+                  >
+                    <div
+                      className="period_container"
+                    >
+                      <PeriodRange
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "today",
+                              "value": "1",
+                            },
+                            Object {
+                              "label": "week",
+                              "value": "7",
+                            },
+                            Object {
+                              "label": "month",
+                              "value": "30",
+                            },
+                          ]
+                        }
+                        value={
+                          Object {
+                            "label": "today",
+                            "value": "1",
+                          }
+                        }
+                      >
+                        <div
+                          className="PeriodRange"
+                        >
+                          <div
+                            className="item active"
+                            key="1"
+                            onClick={[Function]}
+                          >
+                            today
+                          </div>
+                          <div
+                            className="item"
+                            key="7"
+                            onClick={[Function]}
+                          >
+                            week
+                          </div>
+                          <div
+                            className="item"
+                            key="30"
+                            onClick={[Function]}
+                          >
+                            month
+                          </div>
+                        </div>
+                      </PeriodRange>
+                    </div>
+                    <div
+                      className="section_container"
+                    >
+                      <DropDown
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "All",
+                              "value": "all-sections",
+                            },
+                            Object {
+                              "label": "Arts",
+                              "value": "arts",
+                            },
+                            Object {
+                              "label": "Automobiles",
+                              "value": "automobiles",
+                            },
+                            Object {
+                              "label": "Books",
+                              "value": "books",
+                            },
+                            Object {
+                              "label": "Business",
+                              "value": "business",
+                            },
+                            Object {
+                              "label": "Fashion",
+                              "value": "fashion",
+                            },
+                            Object {
+                              "label": "Food",
+                              "value": "food",
+                            },
+                            Object {
+                              "label": "Health",
+                              "value": "health",
+                            },
+                            Object {
+                              "label": "Home",
+                              "value": "home",
+                            },
+                            Object {
+                              "label": "Insider",
+                              "value": "insider",
+                            },
+                            Object {
+                              "label": "Magazine",
+                              "value": "magazine",
+                            },
+                            Object {
+                              "label": "Movies",
+                              "value": "movies",
+                            },
+                            Object {
+                              "label": "National",
+                              "value": "national",
+                            },
+                            Object {
+                              "label": "Nyregion",
+                              "value": "nyregion",
+                            },
+                            Object {
+                              "label": "Obituaries",
+                              "value": "obituaries",
+                            },
+                            Object {
+                              "label": "Opinion",
+                              "value": "opinion",
+                            },
+                            Object {
+                              "label": "Politics",
+                              "value": "politics",
+                            },
+                            Object {
+                              "label": "Realestate",
+                              "value": "realestate",
+                            },
+                            Object {
+                              "label": "Science",
+                              "value": "science",
+                            },
+                            Object {
+                              "label": "Sports",
+                              "value": "sports",
+                            },
+                            Object {
+                              "label": "Sundayreview",
+                              "value": "sundayreview",
+                            },
+                            Object {
+                              "label": "Technology",
+                              "value": "technology",
+                            },
+                            Object {
+                              "label": "Theater",
+                              "value": "theater",
+                            },
+                            Object {
+                              "label": "Tmagazine",
+                              "value": "tmagazine",
+                            },
+                            Object {
+                              "label": "Travel",
+                              "value": "travel",
+                            },
+                            Object {
+                              "label": "Upshot",
+                              "value": "upshot",
+                            },
+                            Object {
+                              "label": "World",
+                              "value": "world",
+                            },
+                          ]
+                        }
+                        value={
+                          Object {
+                            "label": "All",
+                            "value": "all-sections",
+                          }
+                        }
+                      >
+                        <div
+                          className="DropDown"
+                        >
+                          <div
+                            className="value_container"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="text"
+                            >
+                              All
+                            </div>
+                            <div
+                              className="icon"
+                            >
+                              <img
+                                alt="caret"
+                                src="caret-down.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </DropDown>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="articles_container"
+              >
+                <ArticleList
+                  activeArticleData={null}
+                  data={null}
+                  errorLoading={false}
+                  fetchingMoreArticles={false}
+                  loadMoreClickHandler={[Function]}
+                  loading={true}
+                  retryButtonHandler={[Function]}
+                  selectArticleHandler={[Function]}
+                >
+                  <div
+                    className="ArticleList"
+                  >
+                    <LoadingContent>
+                      <div
+                        className="center_wrapper"
+                      >
+                        <div>
+                          <div
+                            className="loader_bars"
+                          >
+                            Loading...
+                          </div>
+                        </div>
+                      </div>
+                    </LoadingContent>
+                  </div>
+                </ArticleList>
+              </div>
+            </div>
+            <div
+              className="details_content"
+            >
+              <Route
+                path="/articles/details"
+                render={[Function]}
+              />
+              <div
+                className="details_placeholder"
+              >
+                <div
+                  className="header"
+                />
+                <div
+                  className="placeholder"
+                >
+                  Select an article to view
+                </div>
+              </div>
+            </div>
+          </div>
+        </ArticlesScreen>
+      </Route>
+    </Switch>
+  </Router>
+</HashRouter>
+`;

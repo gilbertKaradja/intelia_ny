@@ -16,7 +16,8 @@ class ArticleList extends Component {
             data,
             fetchingMoreArticles,
             loadMoreClickHandler,
-            selectArticleHandler
+            selectArticleHandler,
+            activeArticleData
         } = this.props;
 
         let content;
@@ -39,6 +40,7 @@ class ArticleList extends Component {
                     fetchingMoreArticles={fetchingMoreArticles}
                     loadMoreClickHandler={loadMoreClickHandler}
                     selectArticleHandler={selectArticleHandler}
+                    activeArticleData={activeArticleData}
                 />
             );
 

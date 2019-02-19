@@ -1,0 +1,30 @@
+#root {
+    height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+@media (max-width: 1400px) {
+    #root {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+.AppRoot {
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    overflow-x: auto;
+    margin: auto;
+    min-height: 500px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+}
+
+
+
