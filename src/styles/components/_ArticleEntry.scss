@@ -77,7 +77,7 @@ $thumbnail_size: 75px;
         margin-left: 20px;
         text-align: center;
 
-        img {
+        svg {
             width: 13px;
             height: 13px;
         }
@@ -114,6 +114,10 @@ $thumbnail_size: 75px;
 
                 .title_author{
 
+                    .block-with-text:after {
+                        background-color: #5085ff;
+                    }
+
                     .title {
                         color: white;
                     }
@@ -122,6 +126,22 @@ $thumbnail_size: 75px;
                         color: white;
                     }
 
+                    .date {
+                        label {
+                            color: white;
+                        }
+                        
+                    }
+
+                }
+            }
+
+            .button_wrapper {
+        
+                svg {
+                    width: 13px;
+                    height: 13px;
+                    fill: white;
                 }
             }
         }

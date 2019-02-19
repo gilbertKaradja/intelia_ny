@@ -2,7 +2,7 @@ import React from 'react';
 
 import FadeImage from '../../../../../../components/FadeImage/index.js';
 
-import icon from '../../../../../../assets/icons/right-chevron.svg';
+import { ReactComponent as CaretIcon } from '../../../../../../assets/icons/right-chevron.svg';
 
 const ArticleEntry = (props) => {
 
@@ -47,7 +47,7 @@ const ArticleEntry = (props) => {
             </div>
 
             <div className="button_wrapper">
-                <img src={icon} alt='caret_right' />
+                <CaretIcon />
             </div>
 
         </div>
