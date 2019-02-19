@@ -97,5 +97,27 @@ describe('DetailsScreen component', () => {
         component.instance().goBack();
 
         expect(spy).toHaveBeenCalled();
+
+        spy.mockClear()
+    });
+
+    it('should render nothing on empty props and call the back handler', () => {
+
+        const spy = jest.spyOn(DetailsScreen.prototype, 'goBack');
+
+        const component = mount(
+            <DetailsScreen
+                articleData={null}
+                history={{goBack: () => {}}}
+            />
+        );
+
+        expect(component).toMatchSnapshot();
+
+        component.instance().goBack();
+
+        expect(spy).toHaveBeenCalled();
+
+        spy.mockClear()
     });
 });

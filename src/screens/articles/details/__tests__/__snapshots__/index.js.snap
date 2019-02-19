@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DetailsScreen component should render nothing on empty props and call the back handler 1`] = `
+<DetailsScreen
+  articleData={null}
+  history={
+    Object {
+      "goBack": [Function],
+    }
+  }
+/>
+`;
+
 exports[`DetailsScreen component should render properly even if an image is not available 1`] = `
 <div
   className="DetailsScreen"

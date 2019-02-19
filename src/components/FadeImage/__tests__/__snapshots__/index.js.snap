@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FadeImage component should render without issues 1`] = `
+<div
+  className="FadeImage"
+>
+  <img
+    onLoad={[Function]}
+    src="test_image.jpg"
+  />
+  <div
+    className="placeholder"
+  />
+</div>
+`;
+
+exports[`FadeImage component should swap images when src is changed 1`] = `
+<div
+  className="FadeImage"
+>
+  <img
+    onLoad={[Function]}
+    src="test_image.jpg"
+  />
+  <div
+    className="placeholder"
+  />
+</div>
+`;
+
+exports[`FadeImage component should swap images when src is changed 2`] = `
+<div
+  className="FadeImage"
+>
+  <img
+    onLoad={[Function]}
+    src="test_image_2.png"
+  />
+  <div
+    className="placeholder"
+  />
+</div>
+`;

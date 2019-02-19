@@ -45,4 +45,41 @@ describe('ArticleList component', () => {
         component.unmount();
     });
 
+    it('should render a list of articles given a list of articles', () => {
+
+        // const retryButtonHandler = jest.fn(value => value);
+
+        // //renders initial dropdown properly
+        // const component = mount(
+        //     <ArticleList
+        //         loading={false}
+        //         errorLoading={true}
+        //         retryButtonHandler={retryButtonHandler}
+        //     />
+        // );
+        // expect(component).toMatchSnapshot();
+
+        // component.find('.retry_button').simulate('click');
+
+        // expect(retryButtonHandler.mock.calls.length).toBe(1);
+
+        // component.unmount();
+    });
+
+    it('should render an empty article list message and image', () => {
+
+        
+        //renders initial dropdown properly
+        const component = mount(
+            <ArticleList
+                loading={false}
+                errorLoading={false}
+                data={null}
+            />
+        );
+        expect(component).toMatchSnapshot();
+
+        component.unmount();
+    });
+
 });
