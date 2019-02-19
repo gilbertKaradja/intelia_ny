@@ -115,10 +115,11 @@ exports[`DetailsScreen component should call the back handler function when back
     <div
       className="button_wrapper"
     >
-      <img
-        alt="caret_right"
-        src="right-chevron.svg"
-      />
+      <ReactComponent>
+        <svg>
+          right-chevron.svg
+        </svg>
+      </ReactComponent>
     </div>
   </div>
 </ArticleEntry>
@@ -164,10 +165,7 @@ exports[`DetailsScreen component should render properly even if an image is not 
   <div
     className="button_wrapper"
   >
-    <img
-      alt="caret_right"
-      src="right-chevron.svg"
-    />
+    <ReactComponent />
   </div>
 </div>
 `;
@@ -212,10 +210,7 @@ exports[`DetailsScreen component should render without issues 1`] = `
   <div
     className="button_wrapper"
   >
-    <img
-      alt="caret_right"
-      src="right-chevron.svg"
-    />
+    <ReactComponent />
   </div>
 </div>
 `;

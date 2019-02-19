@@ -108,10 +108,11 @@ exports[`ArticleList component should render a list of articles given a list of 
             <div
               className="button_wrapper"
             >
-              <img
-                alt="caret_right"
-                src="right-chevron.svg"
-              />
+              <ReactComponent>
+                <svg>
+                  right-chevron.svg
+                </svg>
+              </ReactComponent>
             </div>
           </div>
         </ArticleEntry>
@@ -168,10 +169,11 @@ exports[`ArticleList component should render a list of articles given a list of 
             <div
               className="button_wrapper"
             >
-              <img
-                alt="caret_right"
-                src="right-chevron.svg"
-              />
+              <ReactComponent>
+                <svg>
+                  right-chevron.svg
+                </svg>
+              </ReactComponent>
             </div>
           </div>
         </ArticleEntry>
@@ -228,10 +230,11 @@ exports[`ArticleList component should render a list of articles given a list of 
             <div
               className="button_wrapper"
             >
-              <img
-                alt="caret_right"
-                src="right-chevron.svg"
-              />
+              <ReactComponent>
+                <svg>
+                  right-chevron.svg
+                </svg>
+              </ReactComponent>
             </div>
           </div>
         </ArticleEntry>
